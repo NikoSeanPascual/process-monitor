@@ -1,21 +1,57 @@
-# Terminal-Based To-Do List
+# Niko’s Process Monitor — Mini Task Manager
 
-A simple Python terminal application to manage your daily tasks. This project allows you to **add, view, remove, and clear tasks** directly from the terminal.
+A **hacker-style Mini Task Manager** built with **CustomTkinter** that displays running system processes in real time, allows searching and filtering, and supports terminating processes directly from the UI.
+
+Designed to look minimal, fast, and terminal-inspired while demonstrating **OS interaction, threading, and real-time UI updates**.
+
+---
 
 ## Features
 
-- Add a task to your to-do list
-- View all tasks in the list
-- Remove a specific task by number
-- Clear all tasks
-- Exit the program
+### 🖥 Real-Time Process Monitoring
+- Displays currently running processes
+- Auto-refreshes every few seconds
+- Groups duplicate processes and aggregates memory usage
 
-## How to Use
+### 🔍 Live Search & Filtering
+- Instantly filter processes by name
+- Case-insensitive, real-time updates
 
-1. Clone the repository or download `to-do-list.py`.
-2. Open a terminal and navigate to the folder containing `to-do-list.py`.
-3. Run the program:
+### 🧠 Memory Usage Tracking
+- Shows memory usage per process (MB)
+- Sorted by highest memory usage by default
+
+### 🧵 Background Processing
+- Process fetching runs in a background thread
+- UI remains responsive at all times
+
+### 🖱 Context Menu Controls
+- Right-click any process to terminate it
+- Uses native system commands (`taskkill`)
+- Immediate effect with no UI freezing
+
+### 🧬 Hacker-Style UI
+- Neon green terminal aesthetic
+- Custom fonts with fallback handling
+- Scrollable process table
+- Fixed widget pool for performance
+
+---
+
+## Tech Stack
+
+- **Python**
+- **CustomTkinter** (modern UI framework)
+- **Tkinter** (standard library)
+- **subprocess** (OS command execution)
+- **threading**
+- **time**
+
+---
+
+## Requirements
+
+Install the required dependency before running:
 
 ```bash
-python to-do-list.py
-****
+pip install customtkinter
